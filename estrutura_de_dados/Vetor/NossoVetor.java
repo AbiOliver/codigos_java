@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class NossoVetor {
 
@@ -21,8 +22,10 @@ public class NossoVetor {
     }
 
     public void SomaUmVetor(NossoVetor aux) {
-        int i = 0;
-        this.dados[i] = this.dados[i] + aux.dados[i];
+        for (int i = 0; i < dados.length; i++) {
+            this.dados[i] = this.dados[i] + aux.dados[i];
+        }
+
     }
 
     public static NossoVetor SomaDoisVetores(NossoVetor vA, NossoVetor vB) {
@@ -38,6 +41,41 @@ public class NossoVetor {
         for (int i = 0; i < dados.length; i++) {
             dados[i] = r.nextInt(dados.length * 10);
         }
+    }
+
+    public void leVetorDoUsuario() {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Tamanho do vetor: ");
+        int tamanho = scan.nextInt();
+        dados = new int[tamanho];
+
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print("Digite o " + (i + 1) + "° valor do vetor: ");
+            dados[i] = scan.nextInt();
+        }
+        scan.close();
+    }
+
+    public void bubbleSort() {
+        for (int i = 1; i < dados.length; i++) {
+            for (int j = 0; j < dados.length - i; j++) {
+                if (dados[j] > dados[j + 1]) {
+                    int aux = dados[j];
+                    dados[j] = dados[j + 1];
+                    dados[j + 1] = aux;
+                }
+            }
+        }
+    }
+
+    @Override
+    public String toString() {
+        String s = " ";
+        for (int i = 0; i < dados.length; i++) {
+            s += dados[i] + " ";
+        }
+        return s;
     }
 
 }
