@@ -1,4 +1,4 @@
-package metodosdeordenacao;
+package metodos_de_ordenacao;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package metodosdeordenacao;
+package metodos_de_ordenacao;
 
 public class BubleSort {
     public static void main(String[] args) {
