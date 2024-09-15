@@ -101,6 +101,33 @@ public class NossoVetorDinamico {
         }
     }
 
+    public void selectionSort() {
+        int menor;
+        for (int i = 0; i < dados.length; i++) {
+            menor = i;
+            for (int j = i + 1; j < dados.length; j++) {
+                if (dados[menor] > dados[j]) {
+                    menor = j;
+                }
+            }
+            int aux = dados[menor];
+            dados[menor] = dados[i];
+            dados[i] = aux;
+        }
+    }
+    public void insertionSort(){
+        int aux;
+        int j;
+        for (int i = 0; i < dados.length; i++) {
+            aux = dados[i];
+            j = i - 1;
+            while (j >= 0 && dados[j] > aux) { 
+                dados[j + 1] = dados[j];
+                j--;
+            }
+            dados[j + 1] = aux;
+        }
+    }
     public boolean buscaBinaria(int x) {
         int ini = 0, fim = ocupacao - 1;
         while (ini <= fim) {
