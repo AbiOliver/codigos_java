@@ -1,17 +1,17 @@
 package pilhas.pilha_char_vetor;
 
-public class pilha {
+public class Pilha {
     private char[] dados;
     private int topo;
     private int capacidade;
 
-    public pilha(int capacidade) {
+    public Pilha(int capacidade) {
         dados = new char[capacidade];
         topo = 0;
         this.capacidade = capacidade;
     }
 
-    public pilha() {
+    public Pilha() {
         this(10);
     }
 
@@ -42,14 +42,12 @@ public class pilha {
     @Override
     public String toString() {
         String s = "";
-        if (estaCheia()) {
-            for (int i = topo - 1; i >= 0; i--) {
+        if (estaVazia())
+            s += "pilha vazia\n";
+        else
+            for (int i = topo - 1; i >= 0; i--)
                 s += dados[i] + "\n";
-            }
-        } else {
-            s += " pilha vazia";
-        }
-        return s + "";
+        return s + "--------------\n";
     }
 
 }

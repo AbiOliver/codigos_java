@@ -1,18 +1,18 @@
 package pilhas.pilha_inteiro_vetor;
 
-public class pilha {
+public class Pilha {
     private int[] dados;
     private int topo;
     private int capacidade;
 
-    public pilha(int capacidade) {
+    public Pilha(int capacidade) {
 
         dados = new int[capacidade];
         topo = 0;
         this.capacidade = capacidade;
     }
 
-    public pilha() {
+    public Pilha() {
         this(10);
     }
 

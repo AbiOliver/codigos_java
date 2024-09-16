@@ -13,7 +13,7 @@ public class Parenteses {
         boolean estaCerta = true;
         int i = 0;
 
-        while (i < expressao.length() && estarCerta) {
+        while (i < expressao.length() && estaCerta) {
             char letra = expressao.charAt(i++);
             if (letra == '(') {
                 p.push(letra);

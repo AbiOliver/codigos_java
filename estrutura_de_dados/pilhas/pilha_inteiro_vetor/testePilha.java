@@ -1,11 +1,10 @@
 package pilhas.pilha_inteiro_vetor;
 
 import java.util.Random;
-import java.util.random;
 
 public class testePilha {
     public static void main(String[] args) {
-        pilha p = new Pilha(8);
+        Pilha p = new Pilha(8);
         Random random = new Random();
         do {
             if (random.nextBoolean()) {
